@@ -16,6 +16,11 @@ This handles deployment for a static web client.
 2. Deploy stack to create certificate, *certificate should be propogated in deployment*
 3. Visit website
 
+## Architecture
+
+<p align="center">
+  <img src="/architecture-diagram.drawio.svg" />
+</p>
 
 ## Usage 
 
