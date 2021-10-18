@@ -1,4 +1,4 @@
-# AWS Web Client
+# Generic Web Client
 
 ## Info 
 

@@ -31,7 +31,7 @@
     "rimraf": "3.0.2",
     "serverless": "2.62.0",
     "serverless-s3-cleaner": "1.0.1",
-    "serverless-certificate-creator": "1.5.3",
+    "serverless-certificate-creator": "1.6.0",
     "serverless-cloudfront-invalidate": "1.11.0",
     "serverless-s3-deploy": "0.10.0",
     "serverless-scriptable-plugin": "1.2.1",

@@ -1,11 +1,6 @@
 service: webClient
 
-#   Deprecation warning: Variables resolver reports following resolution errors:
-#   - Variable syntax error at "custom.certificateArn": 
-#     Invalid variable address at index 16 in "${certificate:${self:custom.customCertificate.certificateName}:CertificateArn}"
-#   Update serverless-certificate-creator & uncomment next line when this PR is merged
-#   https://github.com/schwamster/serverless-certificate-creator/pull/50
-#   variablesResolutionMode: 20210219
+variablesResolutionMode: 20210326
 
 plugins:
   - serverless-certificate-creator
@@ -53,7 +48,7 @@ custom:
   customCertificate:
     certificateName: ${self:custom.domainName}
     hostedZoneIds: ${self:custom.hostedZoneId}
-  certificateArn: ${certificate:${self:custom.customCertificate.certificateName}:CertificateArn}
+  certificateArn: ${certificate(${self:custom.customCertificate.certificateName}):CertificateArn}
 
 provider:
   name: aws
