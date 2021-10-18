@@ -32,7 +32,7 @@ export AWS_PROFILE=<profile_name>
 ### Install Dependencies:
 
 ```bash
-yarn run deploy
+yarn run install
 ```
 
 ### Lint & Type Check:
