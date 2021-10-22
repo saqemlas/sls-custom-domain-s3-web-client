@@ -1,4 +1,4 @@
-# Generic Web Client
+# Custom Domain Web Client S3 Bucket
 
 ## Info 
 
