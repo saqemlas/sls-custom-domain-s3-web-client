@@ -2,11 +2,11 @@
 
 ## Info 
 
-This handles deployment for a static web client. 
-- code will be bundled in deployment
-- deployed to an S3 bucket
+This handles deployment for...
+- web client will be bundled in deployment
+- uploaded to an S3 bucket
 - cloudfront distribution with origin access identity
-- create a dns record targeting the cloudfront distribution
+- a type dns record targeting the cloudfront distribution as alias
 
 1. Add the following ssm parameters to systems manager:
 
