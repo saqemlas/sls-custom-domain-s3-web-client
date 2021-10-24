@@ -38,7 +38,7 @@ custom:
       - ${cf:${self:custom.baseName}.WebsiteBucketName, ''}
 
   cloudfrontInvalidate:
-    - distributionIdKey: WebsiteDistributionId
+    - distributionIdKey: !Ref WebsiteDistributionId
       items:
         - "/*"
 
