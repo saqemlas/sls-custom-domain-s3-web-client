@@ -52,7 +52,7 @@ custom:
 
 provider:
   name: aws
-  region: ${opt:stage, 'eu-west-1'}
+  region: ${opt:region, 'eu-west-1'}
   stage: ${opt:stage, 'dev'}
   stackName: ${self:custom.baseName}
   runtime: nodejs14.x
