@@ -33,7 +33,7 @@
     "serverless-s3-cleaner": "1.0.1",
     "serverless-certificate-creator": "1.6.0",
     "serverless-cloudfront-invalidate": "1.11.0",
-    "serverless-s3-deploy": "0.10.0",
+    "serverless-s3-sync": "1.17.3",
     "serverless-scriptable-plugin": "1.2.1",
     "typescript": "4.0.5"
   },

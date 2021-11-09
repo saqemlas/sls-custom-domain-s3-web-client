@@ -4,7 +4,7 @@ variablesResolutionMode: 20210326
 
 plugins:
   - serverless-certificate-creator
-  - serverless-s3-deploy
+  - serverless-s3-sync
   - serverless-s3-cleaner
   - serverless-scriptable-plugin
   - serverless-cloudfront-invalidate
@@ -23,19 +23,14 @@ custom:
     after:aws:deploy:deploy:updateStack:
       - yarn run build
 
-  assets:
-    auto: true
-    targets:
-      - bucket: !Ref WebsiteBucket
-        empty: true
-        files:
-          - source: build
-            globs: '**/*'
+  s3Sync:
+    - bucketNameKey: WebsiteBucketName
+      localDir: build
   
   serverless-s3-cleaner:
     buckets:
       - ${cf:${self:custom.baseName}.ServerlessDeploymentBucketName, ''}
-      - ${cf:${self:custom.baseName}.WebsiteBucketName, ''}
+      - WebsiteBucketName
 
   cloudfrontInvalidate:
     - distributionIdKey: !Ref WebsiteDistributionId
