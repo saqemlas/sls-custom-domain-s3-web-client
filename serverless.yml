@@ -1,4 +1,4 @@
-service: webClient
+service: webclient
 
 variablesResolutionMode: 20210326
 
@@ -16,7 +16,7 @@ package:
     - '!.build/**'
 
 custom:
-  project: awsTemplate
+  project: template
   baseName: ${self:custom.project}-${self:service}-${self:provider.stage}
   
   scriptHooks:
@@ -29,8 +29,8 @@ custom:
   
   serverless-s3-cleaner:
     buckets:
-      - ${cf:${self:custom.baseName}.ServerlessDeploymentBucketName, ''}
       - WebsiteBucketName
+      - ${cf:${self:custom.baseName}.ServerlessDeploymentBucketName, ''}
 
   cloudfrontInvalidate:
     - distributionIdKey: !Ref WebsiteDistributionId
